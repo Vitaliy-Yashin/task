@@ -1,9 +1,11 @@
 services:
   backend:
-    container_name: backend
+    container_name: backend    
     image: backend
     networks:
       - app-network
+    environment:
+      PORT: 5000  
   nginx:
     container_name: nginx
     image: nginx
