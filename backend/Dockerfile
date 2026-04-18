@@ -10,4 +10,6 @@ COPY . .
 
 EXPOSE 5000
 
+USER appuser
+
 CMD ["npm", "run", "dev"]
