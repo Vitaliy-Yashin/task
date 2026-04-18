@@ -1,0 +1,9 @@
+services:
+  backend:
+    container_name: backend
+    image: backend
+    networks:
+      - app-netwoek
+networks:
+  app-network:
+    driver: bridge          
