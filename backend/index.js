@@ -1,10 +1,9 @@
 import express from 'express'
 const app = express()
-const PORT = process.env.PORT || 8000
+const PORT = process.env.PORT || 5000
+import router from './router/router.js'
 app.use(express.json())
-app.use('/', (req, res)=>{
-  res.json("Hello from Effective Mobile!")
-})
+app.use('/', router)
 
 app.listen(PORT, ()=>{
   console.log(`The Server started on a ${PORT} port`)
